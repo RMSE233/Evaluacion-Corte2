@@ -234,13 +234,4 @@ Además, la validación del código contempla la detección de duplicados inclus
 
 - **Universidad:** Universidad Americana (UAM).
 - **Carrera:** Ingeniería en Sistemas.
-- **Ubicación:** Managua, Nicaragua.
 - **Proyecto:** Corte Evaluativo 2.
-
-### Repositorio
-
-[https://github.com/RMSE233/Evaluacion-Corte2](https://github.com/RMSE233/Evaluacion-Corte2)
-
-## Licencia
-
-Este repositorio no especifica una licencia de distribución en esta documentación. Si se desea permitir formalmente la reutilización, modificación o distribución del código, se recomienda añadir un archivo `LICENSE` con la licencia elegida.
