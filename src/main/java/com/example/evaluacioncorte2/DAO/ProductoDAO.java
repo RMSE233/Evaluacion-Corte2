@@ -37,7 +37,7 @@ public class ProductoDAO {
 
         sql.append(" ORDER BY codigo ASC");
 
-        try (Connection conn = ConexionDB.getConnection();
+        try (Connection conn = ConexionDB.getConexion();
              PreparedStatement pstmt = conn.prepareStatement(sql.toString())) {
 
             for (int i = 0; i < parametros.size(); i++) {
@@ -69,7 +69,7 @@ public class ProductoDAO {
                 ? "SELECT COUNT(*) FROM producto WHERE UPPER(BTRIM(codigo)) = UPPER(BTRIM(?))"
                 : "SELECT COUNT(*) FROM producto WHERE UPPER(BTRIM(codigo)) = UPPER(BTRIM(?)) AND id_producto <> ?";
 
-        try (Connection conn = ConexionDB.getConnection();
+        try (Connection conn = ConexionDB.getConexion();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, codigo);
@@ -91,7 +91,7 @@ public class ProductoDAO {
 
     public int insertar(Producto p) throws SQLException {
         String sql = "INSERT INTO producto (codigo, nombre, categoria, precio, stock) VALUES (?, ?, ?, ?, ?)";
-        try (Connection conn = ConexionDB.getConnection();
+        try (Connection conn = ConexionDB.getConexion();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, p.getCodigo());
@@ -109,7 +109,7 @@ public class ProductoDAO {
 
     public int actualizar(Producto p) throws SQLException {
         String sql = "UPDATE producto SET codigo = ?, nombre = ?, categoria = ?, precio = ?, stock = ? WHERE id_producto = ?";
-        try (Connection conn = ConexionDB.getConnection();
+        try (Connection conn = ConexionDB.getConexion();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, p.getCodigo());
@@ -128,7 +128,7 @@ public class ProductoDAO {
 
     public int eliminar(int idProducto) throws SQLException {
         String sql = "DELETE FROM producto WHERE id_producto = ?";
-        try (Connection conn = ConexionDB.getConnection();
+        try (Connection conn = ConexionDB.getConexion();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setInt(1, idProducto);
