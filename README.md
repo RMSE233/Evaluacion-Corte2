@@ -378,7 +378,3 @@ Si persiste el problema, revisá la consola de IntelliJ IDEA, la configuración 
 - Universidad: Universidad Americana (UAM).
 - Carrera: Ingeniería en Sistemas.
 - Proyecto: Corte Evaluativo 2.
-
-## Repositorio
-
-[Evaluacion-Corte2 en GitHub](https://github.com/RMSE233/Evaluacion-Corte2)
